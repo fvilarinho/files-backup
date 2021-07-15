@@ -34,7 +34,7 @@
 		},
 		"version": {
 			"description": "Version of the build.",
-			"value": "latest"
+			"value": "1.0.0"
 		}
 	}
 }
