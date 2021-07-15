@@ -1,0 +1,40 @@
+{
+	"serverName": {
+		"description": "Defines the IP/hostname of the Rsync service.",
+		"value": "sftp"
+	},
+	"serverPort": {
+		"description": "Defines the listen port of the Rsync service.",
+		"value": 2222
+	},
+	"user": {
+		"description": "Defines the user name of the Rsync service.",
+		"value": "sftp"
+	},
+	"password": {
+		"description": "Defines the user password of the Rsync service.",
+		"value": "#User@2021!"
+	},
+	"crontab": {
+		"description": "Defines the scheduling expression (crontab format) for the backup.",
+		"value": "0 0 * * *"
+	},
+	"sourceDir": {
+		"description": "Defines the directory to be backed up.",
+		"value": "/sftp"
+	},
+	"backupDir": {
+		"description": "Defines the directory to store the backup files.",
+		"value": "/home/user/data"
+	},
+	"build":{
+		"name": {
+			"description": "Name of the build.",
+			"value": "files-backup"
+		},
+		"version": {
+			"description": "Version of the build.",
+			"value": "latest"
+		}
+	}
+}
