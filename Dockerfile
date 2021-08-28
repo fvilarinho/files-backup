@@ -1,6 +1,6 @@
-FROM ghcr.io/concepting-com-br/base-image:1.1.0
+FROM ghcr.io/fvilarinho/base-image:1.1.0
 
-LABEL maintainer="fvilarinho@concepting.com.br"
+LABEL maintainer="fvilarinho@gmail.com"
 
 USER root
 
