@@ -26,15 +26,5 @@
 	"backupDir": {
 		"description": "Defines the directory to store the backup files.",
 		"value": "/home/user/data"
-	},
-	"build":{
-		"name": {
-			"description": "Name of the build.",
-			"value": "files-backup"
-		},
-		"version": {
-			"description": "Version of the build.",
-			"value": "1.0.0"
-		}
 	}
 }
