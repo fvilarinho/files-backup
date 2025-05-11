@@ -1,4 +1,4 @@
-FROM ghcr.io/fvilarinho/base-image:1.1.0
+FROM ghcr.io/fvilarinho/base-image:1.2.0
 
 LABEL maintainer="fvilarinho@gmail.com"
 
