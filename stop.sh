@@ -4,4 +4,4 @@ if [ -f .env ]; then
   source .env
 fi
 
-docker-compose down
+docker compose down
