@@ -13,14 +13,17 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
-    env:
-      DOCKER_REGISTRY_URL: ${{ secrets.DOCKER_REGISTRY_URL }}
-      DOCKER_REGISTRY_USER: ${{ secrets.DOCKER_REGISTRY_USER }}
-      DOCKER_REGISTRY_PASSWORD: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}
     steps:
-      - uses: actions/checkout@v2
+      - name: Download project files
+        uses: actions/checkout@v2
+
       - name: Build the Docker image
+        env:
+          DOCKER_REGISTRY_PASSWORD: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}
         run: ./build.sh
+
       - name: Publish the Docker image
+        env:
+          DOCKER_REGISTRY_PASSWORD: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}
         run: ./publish.sh
         
