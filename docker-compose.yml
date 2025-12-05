@@ -2,7 +2,10 @@ services:
   files-backup:
     build:
       context: .
-    image: ghcr.io/fvilarinho/${BUILD_NAME}:${BUILD_VERSION}
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    image:  ${DOCKER_REGISTRY_URL}/${DOCKER_REGISTRY_ID}/${BUILD_NAME}:${BUILD_VERSION}
     container_name: ${BUILD_NAME}
     hostname: ${BUILD_NAME}
     depends_on:

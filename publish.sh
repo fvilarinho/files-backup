@@ -12,4 +12,8 @@ if [ ! -z "$DOCKER_REGISTRY_URL" ]; then
 	echo $DOCKER_REGISTRY_PASSWORD | docker login -u $DOCKER_REGISTRY_ID $DOCKER_REGISTRY_URL --password-stdin
 fi
 
-docker compose push
+docker buildx bake --push
+
+export BUILD_VERSION=latest
+
+docker buildx bake --push
